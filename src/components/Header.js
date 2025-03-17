@@ -4,9 +4,15 @@ import { NavLink } from 'react-router-dom'
 const Header = () => {
   return (
     <header className="header">
-      <NavLink to="/"> Главная</NavLink>
-      <NavLink to="/library"> Библиотека</NavLink>
-      <NavLink to="/accounting"> Учет</NavLink>
+      <NavLink className={'header_link'} to="/">
+        Главная
+      </NavLink>
+      <NavLink className={'header_link'} to="/library">
+        Библиотека
+      </NavLink>
+      <NavLink className={'header_link'} to="/accounting">
+        Учет
+      </NavLink>
     </header>
   )
 }
