@@ -8,7 +8,7 @@ const BookCard = ({ book }) => {
       <img className="book_card_img" src={cover} alt={title} />
       <h5 className="book_card_title"> {title}</h5>
       <div className="book_card_author_cont">
-        <Author width={10} height={10} />
+        <Author width={15} height={15} />
         <p className="book_card_author">{author}</p>
       </div>
     </div>
