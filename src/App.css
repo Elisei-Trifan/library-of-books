@@ -136,20 +136,11 @@
 .modal_arrow {
   position: absolute;
   top: 50%;
-  background: rgba(255, 255, 255, 0.6);
+  right: 10px;
+  background: none;
   border: none;
-  font-size: 30px;
-  padding: 10px;
   cursor: pointer;
   transform: translateY(-50%);
-}
-
-.left {
-  left: 10px;
-}
-
-.right {
-  right: 10px;
 }
 
 .footer {

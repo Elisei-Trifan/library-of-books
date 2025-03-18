@@ -1,5 +1,6 @@
 import React from 'react'
 import Author from '../assets/Author'
+import Right from '../assets/Right'
 
 const BookCard = ({ book }) => {
   const { title, author, cover, backCover } = book
@@ -7,6 +8,10 @@ const BookCard = ({ book }) => {
   const [currentPage, setCurrentPage] = React.useState(0)
 
   const toggleModal = () => setIsOpen(!isOpen)
+
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % 2) // 0 → 1 → 0
+  }
 
   return (
     <>
@@ -36,17 +41,8 @@ const BookCard = ({ book }) => {
               src={currentPage === 0 ? cover : backCover}
               alt={title}
             />
-            <button
-              className="modal_arrow left"
-              onClick={() => setCurrentPage(0)}
-            >
-              &larr;
-            </button>
-            <button
-              className="modal_arrow right"
-              onClick={() => setCurrentPage(1)}
-            >
-              &rarr;
+            <button className="modal_arrow" onClick={nextPage}>
+              <Right />
             </button>
           </div>
         </div>
