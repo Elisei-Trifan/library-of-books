@@ -42,7 +42,7 @@ const BookCard = ({ book }) => {
               alt={title}
             />
             <button className="modal_arrow" onClick={nextPage}>
-              <Right />
+              <Right width={32} height={32} />
             </button>
           </div>
         </div>

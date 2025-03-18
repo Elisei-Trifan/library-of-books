@@ -89,7 +89,7 @@ export const books = [
   },
   {
     id: 12,
-    title: 'Вестник Истины №',
+    title: 'Вестник Истины №4, 2023',
     author: 'Издательство Христианин',
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_16-56-34.jpg`,
     backCover: '/slider/book_back.jpg',
