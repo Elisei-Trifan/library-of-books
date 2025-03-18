@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .App {
@@ -43,6 +44,36 @@
 .active {
   color: rgb(125, 125, 26);
 }
+.book_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.book_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 200px;
+  width: calc(24% - 20px);
+  overflow: hidden;
+  padding: 5px 5px;
+}
+
+.book_card_author {
+  font-size: 10px;
+  color: gray;
+}
+
+.book_card img {
+  width: 100%;
+  height: 200px; /* Или установи свою высоту */
+  object-fit: cover; /* Чтобы изображение не деформировалось */
+  border-radius: 10px;
+}
 
 .footer {
   display: flex;
@@ -54,4 +85,10 @@
 
 .footer_title {
   font-size: 12px;
+}
+
+@media (max-width: 400px) {
+  .book_card {
+    width: 45%; /* Карточки будут занимать всю ширину экрана */
+  }
 }

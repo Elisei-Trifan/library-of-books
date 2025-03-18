@@ -4,7 +4,7 @@ import BookCard from '../components/BookCard'
 
 const BookList = () => {
   return (
-    <div>
+    <div className="book_list">
       {books.map((item) => (
         <BookCard key={item.id} book={item} />
       ))}

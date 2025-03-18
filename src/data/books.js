@@ -1,14 +1,32 @@
 export const books = [
   {
     id: 1,
-    title: 'Название книги',
-    author: 'Автор',
-    cover: '/images/book1.jpg',
+    title: 'На краю земли',
+    author: 'Владимир Тевс',
+    cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_00-04-45.jpg`,
   },
   {
     id: 2,
     title: 'Еще одна книга',
-    author: 'Другой автор',
-    cover: '/images/book2.jpg',
+    author: 'Владимир Тевс',
+    cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_00-04-45.jpg`,
+  },
+  {
+    id: 3,
+    title: 'Еще одна книга',
+    author: 'Владимир Тевс',
+    cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_00-04-45.jpg`,
+  },
+  {
+    id: 4,
+    title: 'Еще одна книга',
+    author: 'Владимир Тевс',
+    cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_00-04-45.jpg`,
+  },
+  {
+    id: 5,
+    title: 'Еще одна книга',
+    author: 'Владимир Тевс',
+    cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_00-04-45.jpg`,
   },
 ]

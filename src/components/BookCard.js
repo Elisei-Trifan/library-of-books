@@ -1,11 +1,12 @@
 import React from 'react'
 
-const BookCard = ({ title, author, cover }) => {
+const BookCard = ({ book }) => {
+  const { title, author, cover } = book
   return (
     <div className="book_card">
       <img src={cover} alt={title} />
-      <h3>{title}</h3>
-      <p>{author}</p>
+      <h5> {title}</h5>
+      <p className="book_card_author"> Автор: {author}</p>
     </div>
   )
 }
