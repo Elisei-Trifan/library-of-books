@@ -3,7 +3,9 @@ import { bookSlider } from './booksSliderdata'
 import './BookSlider.css'
 
 const BookSlider = () => {
-  const [fotoIndex, setFotoIndex] = React.useState(0)
+  const [fotoIndex, setFotoIndex] = React.useState(() =>
+    Math.floor(Math.random() * bookSlider.length)
+  )
   const [inTransition, setInTransition] = React.useState(false)
 
   React.useEffect(() => {

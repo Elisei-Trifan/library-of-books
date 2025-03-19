@@ -1,9 +1,10 @@
 import React from 'react'
 import Author from '../assets/Author'
 import Right from '../assets/Right'
+import Category from '../assets/Category'
 
 const BookCard = ({ book }) => {
-  const { title, author, cover, backCover } = book
+  const { title, author, cover, backCover, category } = book
   const [isOpen, setIsOpen] = React.useState(false)
   const [currentPage, setCurrentPage] = React.useState(0)
 
@@ -23,6 +24,10 @@ const BookCard = ({ book }) => {
           onClick={toggleModal}
         />
         <h5 className="book_card_title"> {title}</h5>
+        <div className="book_card_category_cont">
+          <Category width={15} height={15} color={'grey'} />
+          <p className="book_card_category"> {category} </p>
+        </div>
         <div className="book_card_author_cont">
           <Author width={15} height={15} />
           <p className="book_card_author">{author}</p>
