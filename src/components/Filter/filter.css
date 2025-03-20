@@ -22,6 +22,7 @@
   margin: 0 5px;
   margin-bottom: 4px;
   cursor: pointer;
+  outline: none;
 }
 
 .filter_selected {
