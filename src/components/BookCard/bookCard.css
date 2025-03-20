@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding-right: 15px;
   z-index: 1;
 }
 
@@ -74,6 +75,7 @@
 @media (max-width: 450px) {
   .book_list {
     margin-top: 180px;
+    padding-right: 5px;
     /* max-height: 450px; */
     /* background-color: rgba(235, 209, 232, 0.5); */
   }
