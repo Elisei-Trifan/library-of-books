@@ -1,0 +1,16 @@
+.home_cont {
+  padding-top: 60px;
+}
+
+.home_title {
+  font-size: 40px;
+}
+
+@media (max-width: 450px) {
+  .home_cont {
+    padding-top: 115px;
+  }
+  .home_title {
+    font-size: 30px;
+  }
+}

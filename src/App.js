@@ -1,6 +1,6 @@
 import './App.css'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
-import HomePage from './pages/HomePage'
+import HomePage from './pages/HomePage/HomePage'
 import Layout from './components/Layout'
 import BookList from './pages/BookList'
 

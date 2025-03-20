@@ -18,6 +18,7 @@ const Filter = () => {
     <div className="filter_cont">
       {categories.map((item) => (
         <div
+          key={item}
           className={`filter_item ${
             selectCategory === item ? 'filter_selected' : ''
           } `}

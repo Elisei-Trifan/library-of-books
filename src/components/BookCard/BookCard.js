@@ -1,18 +1,23 @@
 import React from 'react'
-import Author from '../assets/Author'
-import Right from '../assets/Right'
-import Category from '../assets/Category'
+import Author from '../../assets/Author'
+import Category from '../../assets/Category'
+import './bookCard.css'
+import { toggleModal } from '../../redux/slices/filterSlice'
+import { useDispatch } from 'react-redux'
+import Modal from '../Modal/Modal'
 
 const BookCard = ({ book }) => {
-  const { title, author, cover, backCover, category } = book
-  const [isOpen, setIsOpen] = React.useState(false)
-  const [currentPage, setCurrentPage] = React.useState(0)
+  const { title, author, cover, category } = book
+  // const isOpen = useSelector((state) => state.filter.isOpen)
+  const dispatch = useDispatch()
+  // const [isOpen, setIsOpen] = React.useState(false)
+  // const [currentPage, setCurrentPage] = React.useState(0)
 
-  const toggleModal = () => setIsOpen(!isOpen)
+  // const toggleModal = () => setIsOpen(!isOpen)
 
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % 2) // 0 → 1 → 0
-  }
+  // const nextPage = () => {
+  //   setCurrentPage((prev) => (prev + 1) % 2) // 0 → 1 → 0
+  // }
 
   return (
     <>
@@ -21,7 +26,7 @@ const BookCard = ({ book }) => {
           className="book_card_img"
           src={cover}
           alt={title}
-          onClick={toggleModal}
+          onClick={() => dispatch(toggleModal({ isOpen: true, book }))}
         />
         <h5 className="book_card_title"> {title}</h5>
         <div className="book_card_category_cont">
@@ -32,10 +37,11 @@ const BookCard = ({ book }) => {
           <Author width={15} height={15} />
           <p className="book_card_author">{author}</p>
         </div>
+        <Modal />
       </div>
 
       {/* Модальное окно */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="modal_overlay" onClick={toggleModal}>
           <div className="modal_content" onClick={(e) => e.stopPropagation()}>
             <button className="modal_close" onClick={toggleModal}>
@@ -51,7 +57,7 @@ const BookCard = ({ book }) => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </>
   )
 }

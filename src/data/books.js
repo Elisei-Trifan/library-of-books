@@ -77,7 +77,7 @@ export const books = [
     author: `Изд-ство 'Христианин'`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_16-56-31.jpg`,
     backCover: '/slider/book_back.jpg',
-    category: 'Детский журнал',
+    category: 'Детские журналы',
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ export const books = [
     author: `Изд-ство 'Христианин'`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_16-56-33.jpg`,
     backCover: '/slider/book_back.jpg',
-    category: 'Молодежный журнал',
+    category: 'Молодежные журналы',
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ export const books = [
     author: `Изд-ство 'Христианин'`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_16-56-34.jpg`,
     backCover: '/slider/book_back.jpg',
-    category: `Журнал 'Вестник истины'`,
+    category: `Журналы 'Вестник истины'`,
   },
   {
     id: 13,
