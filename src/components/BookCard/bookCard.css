@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 300px;
+  min-height: 330px;
   /* width: calc(24% - 20px); */
   width: 9rem;
   overflow: hidden;
@@ -29,7 +29,7 @@
 
 .book_card_title {
   color: brown;
-  max-height: 60px;
+  max-height: 70px;
   padding: 0 8px;
   padding-top: 5px;
   font-size: 16px;
@@ -57,12 +57,17 @@
   /* line-height: 12px; */
   /* overflow: hidden; */
 }
+.book_svg {
+  min-height: 15px;
+  min-width: 15px;
+}
 
 .book_card_author {
   font-size: 12px;
   color: gray;
   padding-left: 5px;
   max-width: 140px;
+  text-align: left;
 }
 
 .book_card_img {

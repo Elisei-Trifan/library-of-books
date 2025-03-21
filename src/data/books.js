@@ -73,7 +73,7 @@ export const books = [
   },
   {
     id: 10,
-    title: 'Светильник №27',
+    title: 'Светильник № 27',
     author: `Изд-ство 'Христианин'`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_16-56-31.jpg`,
     backCover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_11-39-21.jpg`,
@@ -81,7 +81,8 @@ export const books = [
   },
   {
     id: 11,
-    title: 'Чистый источник №11',
+    title: 'Чистый источник № 11',
+    number: 11,
     author: `Изд-ство 'Христианин'`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_16-56-33.jpg`,
     backCover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_11-39-19.jpg`,
@@ -89,7 +90,7 @@ export const books = [
   },
   {
     id: 12,
-    title: 'Вестник Истины №4, 2023',
+    title: 'Вестник Истины № 4, 2023',
     author: `Изд-ство 'Христианин'`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-18_16-56-34.jpg`,
     backCover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_11-39-17.jpg`,
@@ -392,7 +393,7 @@ export const books = [
     category: 'Назидательные',
   },
   {
-    id: 49,
+    id: 50,
     title: 'Смирение',
     author: `Эндрю Муррей`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_21-46-11.jpg`,
@@ -400,7 +401,7 @@ export const books = [
     category: 'Назидательные',
   },
   {
-    id: 50,
+    id: 51,
     title: 'Великое разделение',
     author: `Эрнст Трахзель-Паули`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_21-46-08.jpg`,
@@ -408,7 +409,7 @@ export const books = [
     category: 'Назидательные',
   },
   {
-    id: 51,
+    id: 52,
     title: 'Грех - зло всех зол в этом мире',
     author: `Иван Вениаминович Каргель`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_21-46-05.jpg`,
@@ -416,7 +417,7 @@ export const books = [
     category: 'Назидательные',
   },
   {
-    id: 52,
+    id: 53,
     title: 'В каком ты отношении к Духу Святому?',
     author: `Иван Вениаминович Каргель`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_21-46-02.jpg`,
@@ -424,7 +425,7 @@ export const books = [
     category: 'Назидательные',
   },
   {
-    id: 53,
+    id: 54,
     title: 'Стремление к святости',
     author: `Д. Бриджес`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_21-45-59.jpg`,
@@ -432,11 +433,29 @@ export const books = [
     category: 'Назидательные',
   },
   {
-    id: 54,
+    id: 55,
     title: 'Библия говорит',
     author: `Теодор Хаарбек`,
     cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_21-45-55.jpg`,
     backCover: `${process.env.PUBLIC_URL}/images/photo_2025-03-20_21-45-57.jpg`,
     category: 'Назидательные',
+  },
+  {
+    id: 56,
+    title: 'Чистый источник № 6',
+    number: 6,
+    author: `Изд-ство 'Христианин'`,
+    cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-21_11-07-21.jpg`,
+    backCover: `${process.env.PUBLIC_URL}/images/photo_2025-03-21_11-07-20.jpg`,
+    category: 'Молодежные журналы',
+  },
+  {
+    id: 57,
+    title: 'Чистый источник № 10',
+    number: 10,
+    author: `Изд-ство 'Христианин'`,
+    cover: `${process.env.PUBLIC_URL}/images/photo_2025-03-21_11-07-19.jpg`,
+    backCover: `${process.env.PUBLIC_URL}/images/photo_2025-03-21_11-07-17.jpg`,
+    category: 'Молодежные журналы',
   },
 ]

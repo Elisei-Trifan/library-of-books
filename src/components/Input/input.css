@@ -17,7 +17,7 @@
 
 .clear_btn {
   position: absolute;
-  top: 5px;
+  top: 6px;
   right: 10px;
   background: none;
   border: none;
@@ -32,7 +32,7 @@
     margin-bottom: 5px;
   }
   .clear_btn {
-    top: -1px;
+    top: 0;
     right: 10px;
     font-size: 30px;
   }

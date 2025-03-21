@@ -7,6 +7,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import Pagination from '../components/Pagination/Pagination'
 
 const BookList = () => {
+  const [filteredBooks, setFilteredBooks] = React.useState(books)
   const selectCategory = useSelector((state) => state.filter.category)
   const location = useLocation()
   const navigate = useNavigate()
@@ -15,7 +16,7 @@ const BookList = () => {
   const searchQuery = searchParams.get('search')?.toLowerCase() || ''
 
   const filterByCategory = selectCategory
-    ? books.filter((book) => book.category === selectCategory)
+    ? filteredBooks.filter((book) => book.category === selectCategory)
     : books
 
   const filteredByInput = searchQuery
@@ -51,7 +52,7 @@ const BookList = () => {
 
   return (
     <>
-      <Filter />
+      <Filter resetPage={() => setCurrentPage(1)} setBooks={setFilteredBooks} />
       <div className="book_list">
         {paginatedBooks.length > 0 ? (
           paginatedBooks.map((item) => <BookCard key={item.id} book={item} />)
