@@ -7,7 +7,9 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import Pagination from '../components/Pagination/Pagination'
 
 const BookList = () => {
-  const [filteredBooks, setFilteredBooks] = React.useState(books)
+  const [youthMagazines, setYouthMagazines] = React.useState(books)
+  const [kinderMagazines, setKinderMagazines] = React.useState(books)
+  const [heraldMagazines, setHeraldMagazines] = React.useState(books)
   const selectCategory = useSelector((state) => state.filter.category)
   const location = useLocation()
   const navigate = useNavigate()
@@ -15,17 +17,53 @@ const BookList = () => {
   const searchParams = new URLSearchParams(location.search)
   const searchQuery = searchParams.get('search')?.toLowerCase() || ''
 
-  const filterByCategory = selectCategory
-    ? filteredBooks.filter((book) => book.category === selectCategory)
-    : books
+  const filteredBooks = React.useMemo(() => {
+    let result = books
+
+    if (selectCategory) {
+      result = result.filter((book) => book.category === selectCategory)
+    }
+
+    if (
+      selectCategory === 'Молодежные журналы' ||
+      selectCategory === 'Детские журналы'
+    ) {
+      result = [...result].sort(
+        (a, b) => (a.number || Infinity) - (b.number || Infinity)
+      )
+    }
+
+    // if (selectCategory === `Журналы 'Вестник истины'`) {
+    //   result = [...result].sort((a, b) => {
+    //     if (b.year !== a.year) {
+    //       return a.year - b.year // Сортировка по году (по убыванию)
+    //     }
+    //     return (a.number || Infinity) - (b.number || Infinity) // Сортировка по номеру (по возрастанию)
+    //   })
+    // }
+
+    if (selectCategory === `Журналы 'Вестник истины'`) {
+      result.sort((a, b) =>
+        b.year !== a.year
+          ? a.year - b.year
+          : (a.number || Infinity) - (b.number || Infinity)
+      )
+    }
+
+    return result
+  }, [selectCategory])
+
+  // const filterByCategory = selectCategory
+  //   ? filteredBooks.filter((book) => book.category === selectCategory)
+  //   : books
 
   const filteredByInput = searchQuery
-    ? filterByCategory.filter(
+    ? filteredBooks.filter(
         (book) =>
           book.title.toLowerCase().includes(searchQuery) ||
           book.author.toLowerCase().includes(searchQuery)
       )
-    : filterByCategory
+    : filteredBooks
 
   const booksPerPage = 20
   const [currentPage, setCurrentPage] = React.useState(1)
@@ -52,7 +90,10 @@ const BookList = () => {
 
   return (
     <>
-      <Filter resetPage={() => setCurrentPage(1)} setBooks={setFilteredBooks} />
+      <Filter
+        resetPage={() => setCurrentPage(1)}
+        // setBooks={setYouthMagazines}
+      />
       <div className="book_list">
         {paginatedBooks.length > 0 ? (
           paginatedBooks.map((item) => <BookCard key={item.id} book={item} />)

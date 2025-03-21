@@ -14,14 +14,14 @@ const Filter = ({ resetPage, setBooks }) => {
     dispatch(setCategory(selectCategory === category ? null : category))
     resetPage()
 
-    // Если выбрана категория "молодежные журналы", сортируем книги
-    if (category === 'Молодежные журналы') {
-      setBooks((prevBooks) =>
-        [...prevBooks].sort(
-          (a, b) => (a.number || Infinity) - (b.number || Infinity)
-        )
-      )
-    }
+    // // Если выбрана категория "молодежные журналы", сортируем книги
+    // if (category === 'Молодежные журналы') {
+    //   setBooks((prevBooks) =>
+    //     [...prevBooks].sort(
+    //       (a, b) => (a.number || Infinity) - (b.number || Infinity)
+    //     )
+    //   )
+    // }
   }
 
   return (
