@@ -7,9 +7,6 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import Pagination from '../components/Pagination/Pagination'
 
 const BookList = () => {
-  const [youthMagazines, setYouthMagazines] = React.useState(books)
-  const [kinderMagazines, setKinderMagazines] = React.useState(books)
-  const [heraldMagazines, setHeraldMagazines] = React.useState(books)
   const selectCategory = useSelector((state) => state.filter.category)
   const location = useLocation()
   const navigate = useNavigate()
@@ -33,15 +30,6 @@ const BookList = () => {
       )
     }
 
-    // if (selectCategory === `Журналы 'Вестник истины'`) {
-    //   result = [...result].sort((a, b) => {
-    //     if (b.year !== a.year) {
-    //       return a.year - b.year // Сортировка по году (по убыванию)
-    //     }
-    //     return (a.number || Infinity) - (b.number || Infinity) // Сортировка по номеру (по возрастанию)
-    //   })
-    // }
-
     if (selectCategory === `Журналы 'Вестник истины'`) {
       result.sort((a, b) =>
         b.year !== a.year
@@ -52,10 +40,6 @@ const BookList = () => {
 
     return result
   }, [selectCategory])
-
-  // const filterByCategory = selectCategory
-  //   ? filteredBooks.filter((book) => book.category === selectCategory)
-  //   : books
 
   const filteredByInput = searchQuery
     ? filteredBooks.filter(
@@ -77,8 +61,7 @@ const BookList = () => {
 
   const handlePageChange = (page) => {
     setCurrentPage(page)
-    window.scrollTo(0, 0) // Прокрутка страницы наверх
-    // Обновление URL для текущей страницы
+    window.scrollTo(0, 0)
     navigate(`?search=${searchQuery}&page=${page}`)
   }
 
@@ -90,10 +73,7 @@ const BookList = () => {
 
   return (
     <>
-      <Filter
-        resetPage={() => setCurrentPage(1)}
-        // setBooks={setYouthMagazines}
-      />
+      <Filter resetPage={() => setCurrentPage(1)} />
       <div className="book_list">
         {paginatedBooks.length > 0 ? (
           paginatedBooks.map((item) => <BookCard key={item.id} book={item} />)

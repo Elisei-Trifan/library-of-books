@@ -32,7 +32,7 @@
     margin-bottom: 5px;
   }
   .clear_btn {
-    top: 0;
+    top: -1px;
     right: 10px;
     font-size: 30px;
   }

@@ -15,7 +15,7 @@ const Header = () => {
           Главная
         </NavLink>
         <NavLink className={'header_link'} to="/library">
-          Библиотека
+          Каталог
         </NavLink>
       </div>
       <Input />
