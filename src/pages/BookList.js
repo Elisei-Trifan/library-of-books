@@ -21,16 +21,13 @@ const BookList = () => {
       result = result.filter((book) => book.category === selectCategory)
     }
 
-    if (
-      selectCategory === 'Молодежные журналы' ||
-      selectCategory === 'Детские журналы'
-    ) {
+    if (selectCategory === 'Молодежи' || selectCategory === 'Детям') {
       result = [...result].sort(
         (a, b) => (a.number || Infinity) - (b.number || Infinity)
       )
     }
 
-    if (selectCategory === `Журналы 'Вестник истины'`) {
+    if (selectCategory === 'Вестник истины') {
       result.sort((a, b) =>
         b.year !== a.year
           ? a.year - b.year
