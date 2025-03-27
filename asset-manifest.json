@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/library-of-books/static/css/main.40433fd8.css",
-    "main.js": "/library-of-books/static/js/main.317d0eed.js",
+    "main.js": "/library-of-books/static/js/main.c70c9fad.js",
     "static/media/home.jpg": "/library-of-books/static/media/home.04b2a0ad367c661ca0eb.jpg",
     "index.html": "/library-of-books/index.html",
     "main.40433fd8.css.map": "/library-of-books/static/css/main.40433fd8.css.map",
-    "main.317d0eed.js.map": "/library-of-books/static/js/main.317d0eed.js.map"
+    "main.c70c9fad.js.map": "/library-of-books/static/js/main.c70c9fad.js.map"
   },
   "entrypoints": [
     "static/css/main.40433fd8.css",
-    "static/js/main.317d0eed.js"
+    "static/js/main.c70c9fad.js"
   ]
 }
